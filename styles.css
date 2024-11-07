@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  max-width: 400px;
+  width: 90%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  color: #004080;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.control-btn {
+  background-color: #0066cc;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.control-btn:hover {
+  background-color: #005bb5;
+}
+
+.status {
+  margin-top: 15px;
+}
+
+.status h2, .status h3 {
+  color: #003366;
+  font-weight: 400;
+}
+
+#timer {
+  font-size: 1.2em;
+  color: #ff6600;
+}
+
+.event-log {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.event-log h3 {
+  color: #004080;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.event-log ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.event-log li {
+  font-size: 1em;
+  color: #333;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8em;
+  }
+  
+  .control-btn {
+    font-size: 1em;
+    padding: 8px 16px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controle de ESP32 via MQTT</title>
+  <!-- Inclui MQTT.js via CDN -->
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+  <!-- Inclui o CSS externo -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Controle de ESP32</h1>
+
+    <!-- Botões para gerar evento SOS e alternar ACC -->
+    <div class="button-group">
+      <button class="control-btn" data-command="SOS" id="sosButton">Gerar Evento SOS</button>
+      <button class="control-btn" data-command="ACC" id="accButton">Alternar ACC</button>
+    </div>
+
+    <!-- Timer e status do evento SOS -->
+    <div class="status">
+      <h2 id="sosStatus">Clique para iniciar o evento SOS</h2>
+      <h3 id="timer"></h3>
+    </div>
+
+    <!-- Área para exibir status do ACC -->
+    <div class="status">
+      <h2>Status do ACC: <span id="accStatus">Desconhecido</span></h2>
+    </div>
+
+    <!-- Registro de eventos do SOS -->
+    <div class="event-log">
+      <h3>Registros de Eventos SOS:</h3>
+      <ul id="eventList"></ul>
+    </div>
+  </div>
+
+  <!-- Inclui o arquivo JavaScript -->
+  <script src="./app.js"></script>
+</body>
+</html>
